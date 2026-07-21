@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turk's Lawn & Gutter | Precision. Power. Clean. | Clarksville, TN</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0a0d0a',
+                        brandCard: '#121612',
+                        brandAccent: '#22c55e',
+                        brandNeon: '#39ff14',
+                        brandBorder: '#273327',
+                        metallic: '#7f8c8d'
+                    },
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(57, 255, 20, 0.25)',
+                        'neon-lg': '0 0 35px rgba(57, 255, 20, 0.45)',
+                        'metallic': 'inset 0 1px 0 rgba(255,255,255,0.2), 0 10px 25px rgba(0,0,0,0.8)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #070907;
+            color: #e2e8f0;
+            background-image: radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.08) 0%, transparent 60%);
+        }
+
+        .clip-hex {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        .metallic-text {
+            background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 50%, #52525b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .metallic-badge {
+            background: linear-gradient(145deg, #2a332a, #111611);
+            border: 1px solid #34d399;
+        }
+
+        /* Custom Before/After Slider Container */
+        .ba-slider {
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .ba-slider .resize {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+        }
+
+        .ba-slider .handle {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #39ff14;
+            box-shadow: 0 0 10px #39ff14;
+            cursor: ew-resize;
+        }
+
+        .ba-slider .handle::after {
+            content: "↔";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 38px;
+            height: 38px;
+            background: #121612;
+            border: 2px solid #39ff14;
+            color: #39ff14;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .glow-border {
+            border: 1px solid rgba(57, 255, 20, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .glow-border:hover {
+            border-color: rgba(57, 255, 20, 0.8);
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brandAccent selection:text-black">
+
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 bg-gradient-to-br from-neutral-800 to-black border-2 border-brandAccent rounded-full flex items-center justify-center shadow-neon transition group-hover:scale-105">
+                    <span class="font-orbitron font-black text-2xl text-white tracking-widest drop-shadow-[0_0_8px_rgba(57,255,20,0.8)]">T</span>
+                </div>
+                <div>
+                    <span class="font-orbitron text-xl sm:text-2xl font-black tracking-wider block metallic-text">TURK'S</span>
+                    <span class="font-rajdhani text-xs tracking-widest text-brandNeon block font-bold uppercase -mt-1">Lawn & Gutter</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-rajdhani font-bold text-lg tracking-wider text-gray-300">
+                <a href="#about" class="hover:text-brandNeon transition">Who We Are</a>
+                <a href="#why-us" class="hover:text-brandNeon transition">Why Choose Us</a>
+                <a href="#services" class="hover:text-brandNeon transition">Services</a>
+                <a href="#before-after" class="hover:text-brandNeon transition">Results</a>
+                <a href="#gallery" class="hover:text-brandNeon transition">Gallery</a>
+                <a href="#testimonials" class="hover:text-brandNeon transition">Reviews</a>
+            </nav>
+
+            <!-- Call CTA Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="tel:7063151895" class="bg-gradient-to-r from-brandAccent to-emerald-600 hover:from-brandNeon hover:to-green-500 text-black font-orbitron font-black px-5 py-2.5 rounded-lg shadow-neon flex items-center gap-2 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid font-black fa-phone"></i>
+                    <span>(706) 315-1895</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-2xl text-brandNeon focus:outline-none p-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brandCard border-b border-brandBorder px-6 py-6 space-y-4">
+            <a href="#about" class="block font-rajdhani font-bold text-xl hover:text-brandNeon">Who We Are</a>
+            <a href="#why-us" class="block font-rajdhani font-bold text-xl hover:text-brandNeon">Why Choose Us</a>
+            <a href="#services" class="block font-rajdhani font-bold text-xl hover:text-brandNeon">Services</a>
+            <a href="#before-after" class="block font-rajdhani font-bold text-xl hover:text-brandNeon">Results</a>
+            <a href="#gallery" class="block font-rajdhani font-bold text-xl hover:text-brandNeon">Gallery</a>
+            <a href="#testimonials" class="block font-rajdhani font-bold text-xl hover:text-brandNeon">Reviews</a>
+            <a href="#contact" class="block font-rajdhani font-bold text-xl text-brandNeon">Get Free Estimate</a>
+            <a href="tel:7063151895" class="block w-full text-center bg-brandAccent text-black font-orbitron font-black py-3 rounded-lg shadow-neon mt-4">
+                Call/Text: (706) 315-1895
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 px-4">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1592417817098-8f3d6ef23a28?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/80 to-transparent z-0"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center space-y-8">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandCard border border-brandAccent/40 text-brandNeon font-rajdhani font-bold tracking-widest text-sm uppercase shadow-neon">
+                <i class="fa-solid fa-location-dot"></i> Serving Clarksville, Tennessee & Surrounding Areas
+            </div>
+
+            <!-- Main Title & Tagline -->
+            <div class="space-y-3">
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-orbitron font-black tracking-tight uppercase leading-none">
+                    <span class="metallic-text">TURK'S</span> <br class="sm:hidden">
+                    <span class="text-brandNeon drop-shadow-[0_0_15px_rgba(57,255,20,0.5)]">LAWN & GUTTER</span>
+                </h1>
+                <p class="font-orbitron text-xl sm:text-2xl text-emerald-400 font-bold tracking-widest pt-2">
+                    PRECISION. POWER. CLEAN.
+                </p>
+            </div>
+
+            <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg">
+                Owned and operated by <span class="text-white font-semibold underline decoration-brandAccent">Christian Pedro</span>. Delivering commercial-grade lawn maintenance and gutter cleaning solutions with military-grade attention to detail.
+            </p>
+
+            <!-- Main Hero Call Box -->
+            <div class="bg-brandCard/90 border-2 border-brandAccent/60 p-6 sm:p-8 rounded-2xl max-w-3xl mx-auto shadow-neon backdrop-blur-md">
+                <p class="text-brandNeon font-orbitron font-black text-sm sm:text-base tracking-widest uppercase mb-2">
+                    <i class="fa-solid fa-bolt mr-2"></i> CALL OR TEXT FOR A FREE ESTIMATE
+                </p>
+                <a href="tel:7063151895" class="inline-block text-3xl sm:text-5xl font-orbitron font-black tracking-wider text-white hover:text-brandNeon transition hover:scale-105 my-2">
+                    (706) 315-1895
+                </a>
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#contact" class="w-full sm:w-auto bg-brandAccent hover:bg-brandNeon text-black font-orbitron font-black px-8 py-3.5 rounded-lg transition-all shadow-neon">
+                        Claim Your Free Estimate
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto bg-neutral-800 hover:bg-neutral-700 text-white font-orbitron font-bold px-8 py-3.5 rounded-lg border border-neutral-600 transition">
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+
+            <!-- Features Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 text-left max-w-4xl mx-auto">
+                <div class="flex items-center gap-3 bg-brandCard/60 p-3 rounded-lg border border-brandBorder">
+                    <i class="fa-solid fa-shield-halved text-brandNeon text-2xl"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-gray-200">100% Guaranteed Quality</span>
+                </div>
+                <div class="flex items-center gap-3 bg-brandCard/60 p-3 rounded-lg border border-brandBorder">
+                    <i class="fa-solid fa-clock text-brandNeon text-2xl"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-gray-200">Fast Response Times</span>
+                </div>
+                <div class="flex items-center gap-3 bg-brandCard/60 p-3 rounded-lg border border-brandBorder">
+                    <i class="fa-solid fa-truck-fast text-brandNeon text-2xl"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-gray-200">Commercial Power Equipment</span>
+                </div>
+                <div class="flex items-center gap-3 bg-brandCard/60 p-3 rounded-lg border border-brandBorder">
+                    <i class="fa-solid fa-handshake text-brandNeon text-2xl"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-gray-200">Free On-Site Quotes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are / About Us Section -->
+    <section id="about" class="py-20 bg-brandDark relative border-t border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Image Box / Graphic -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-brandAccent/40 shadow-neon">
+                        <img src="https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=1000&q=80" alt="Turk's Lawn Care Professional at Work" class="w-full h-[400px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 p-4 bg-brandDark/90 border border-brandAccent/40 rounded-xl backdrop-blur-md">
+                            <h3 class="font-orbitron font-bold text-white text-lg">Christian Pedro</h3>
+                            <p class="text-brandNeon font-rajdhani font-semibold text-sm">Owner & Lead Operator | Clarksville, TN</p>
+                        </div>
+                    </div>
+                    <!-- Decorative Element -->
+                    <div class="absolute -bottom-5 -right-5 w-32 h-32 border-b-4 border-r-4 border-brandNeon rounded-br-2xl hidden sm:block"></div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <div class="inline-block px-3 py-1 bg-brandAccent/10 border border-brandAccent text-brandNeon rounded font-rajdhani font-bold text-sm tracking-widest uppercase">
+                        WHO WE ARE
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-orbitron font-black text-white uppercase tracking-tight">
+                        Built On <span class="text-brandNeon">Precision & Power</span>
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        At <strong class="text-white">Turk's Lawn & Gutter</strong>, operated by <strong>Christian Pedro</strong> in Clarksville, Tennessee, we don't just cut grass—we elevate your property's curb appeal. We understand that your lawn and gutter systems are critical investments in your home's structural health and overall value.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Whether it’s executing razor-sharp lawn edging, restoring overgrown turf, or safely removing leaves and debris from high gutters to prevent water damage, our promise is simple: <span class="text-brandNeon font-semibold">Precision. Power. Clean.</span> Every single time.
+                    </p>
+
+                    <!-- Quote Box -->
+                    <div class="p-4 bg-brandCard border-l-4 border-brandAccent rounded-r-lg">
+                        <p class="italic text-gray-300 font-sans text-sm">
+                            "We treat every yard in Clarksville as if it were our own. No shortcuts, no mess left behind—just clean, power-precision work you can rely on."
+                        </p>
+                        <span class="block mt-2 font-orbitron text-xs text-brandNeon font-bold">— Christian Pedro, Founder</span>
+                    </div>
+
+                    <!-- Highlights Grid -->
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-center gap-2 text-gray-200">
+                            <i class="fa-solid fa-circle-check text-brandNeon"></i>
+                            <span class="font-semibold text-sm">Local Clarksville Operator</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-200">
+                            <i class="fa-solid fa-circle-check text-brandNeon"></i>
+                            <span class="font-semibold text-sm">Call/Text Direct Quotes</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-200">
+                            <i class="fa-solid fa-circle-check text-brandNeon"></i>
+                            <span class="font-semibold text-sm">Residential & Commercial</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-200">
+                            <i class="fa-solid fa-circle-check text-brandNeon"></i>
+                            <span class="font-semibold text-sm">Fair & Honest Rates</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-brandCard relative border-t border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-block px-3 py-1 bg-brandAccent/10 border border-brandAccent text-brandNeon rounded font-rajdhani font-bold text-sm tracking-widest uppercase">
+                    OUR ADVANTAGE
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-orbitron font-black text-white uppercase">
+                    WHY CHOOSE <span class="metallic-text">TURK'S</span>?
+                </h2>
+                <p class="text-gray-400">
+                    We combine high-performance lawn machinery with meticulously disciplined workmanship to deliver results that outshine standard landscaping services.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-brandDark p-8 rounded-2xl glow-border relative group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-brandAccent to-green-800 rounded-xl flex items-center justify-center text-black text-3xl font-black mb-6 shadow-neon group-hover:scale-110 transition">
+                        <i class="fa-solid fa-crosshair"></i>
+                    </div>
+                    <h3 class="font-orbitron font-bold text-xl text-white mb-3">1. PRECISION</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        From clean sidewalk edging to uniform cut heights tailored to Clarksville soil, we pay attention to the fine details other crews rush past.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-brandDark p-8 rounded-2xl glow-border relative group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-brandAccent to-green-800 rounded-xl flex items-center justify-center text-black text-3xl font-black mb-6 shadow-neon group-hover:scale-110 transition">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="font-orbitron font-bold text-xl text-white mb-3">2. POWER</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        We utilize commercial-grade zero-turn mowers, high-PSI pressure systems, and industrial gutter vacuums/blowers to handle heavy buildup fast.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-brandDark p-8 rounded-2xl glow-border relative group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-brandAccent to-green-800 rounded-xl flex items-center justify-center text-black text-3xl font-black mb-6 shadow-neon group-hover:scale-110 transition">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h3 class="font-orbitron font-bold text-xl text-white mb-3">3. CLEAN</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        No grass clippings left on driveways, no sludge left stuck in your downspouts. We blow down every walkway and leave your property immaculate.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Callout Bar -->
+            <div class="mt-12 p-6 bg-gradient-to-r from-emerald-950 via-brandDark to-emerald-950 border border-brandAccent/40 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="text-brandNeon text-4xl">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-orbitron font-bold text-white text-lg">Clogged Gutters Threaten Your Foundation</h4>
+                        <p class="text-gray-300 text-sm">Protect your home in Clarksville before heavy rainfall causes costly water damage.</p>
+                    </div>
+                </div>
+                <a href="tel:7063151895" class="bg-brandNeon text-black font-orbitron font-black px-6 py-3 rounded-lg shadow-neon hover:bg-white transition whitespace-nowrap">
+                    Call (706) 315-1895
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-brandDark border-t border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-block px-3 py-1 bg-brandAccent/10 border border-brandAccent text-brandNeon rounded font-rajdhani font-bold text-sm tracking-widest uppercase">
+                    OUR CORE SERVICES
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-orbitron font-black text-white uppercase">
+                    PRO-GRADE <span class="text-brandNeon">PROPERTY CARE</span>
+                </h2>
+                <p class="text-gray-400">
+                    Comprehensive exterior services designed to keep your home looking crisp, clean, and protected year-round.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Mowing -->
+                <div class="bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandAccent transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1592417817098-8f3d6ef23a28?auto=format&fit=crop&w=600&q=80" alt="Precision Lawn Mowing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute top-4 right-4 bg-black/80 px-3 py-1 rounded text-brandNeon font-orbitron font-bold text-xs">
+                                MOST POPULAR
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-wheat-awn text-brandNeon text-xl"></i>
+                                <h3 class="font-orbitron font-bold text-xl text-white">Precision Lawn Mowing</h3>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Professional cutting at optimal turf heights, crisp weed-eating around trees and fences, hard-surface edging, and thorough blower clean-up.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" onclick="selectService('Lawn Mowing')" class="block text-center w-full py-2.5 bg-neutral-800 hover:bg-brandAccent hover:text-black text-brandNeon font-orbitron font-bold text-sm rounded transition">
+                            Request Estimate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Gutter Cleaning -->
+                <div class="bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandAccent transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Gutter Cleaning & Flushing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-water text-brandNeon text-xl"></i>
+                                <h3 class="font-orbitron font-bold text-xl text-white">Gutter Cleaning & Flushing</h3>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Complete hand and power removal of pine needles, leaves, sludge, and debris. Full downspout flush test to guarantee free-flowing water.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" onclick="selectService('Gutter Cleaning')" class="block text-center w-full py-2.5 bg-neutral-800 hover:bg-brandAccent hover:text-black text-brandNeon font-orbitron font-bold text-sm rounded transition">
+                            Request Estimate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: String Trimming & Edging -->
+                <div class="bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandAccent transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1584467541268-b040f83be3fd?auto=format&fit=crop&w=600&q=80" alt="Line Trimming & Edging" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-scissors text-brandNeon text-xl"></i>
+                                <h3 class="font-orbitron font-bold text-xl text-white">Trimming & Hard Edging</h3>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Vertical stick edging along concrete driveways, walkways, and garden beds to create those razor-sharp lines that stand out in the neighborhood.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" onclick="selectService('Trimming & Edging')" class="block text-center w-full py-2.5 bg-neutral-800 hover:bg-brandAccent hover:text-black text-brandNeon font-orbitron font-bold text-sm rounded transition">
+                            Request Estimate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Yard Cleanup -->
+                <div class="bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandAccent transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1558904541-efa8c196b27d?auto=format&fit=crop&w=600&q=80" alt="Leaf & Debris Cleanup" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-leaf text-brandNeon text-xl"></i>
+                                <h3 class="font-orbitron font-bold text-xl text-white">Seasonal Leaf & Yard Cleanups</h3>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Heavy-duty leaf removal, storm debris clearing, limb pickup, and property haul-off so your lawn stays healthy during seasonal transitions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" onclick="selectService('Yard Cleanup')" class="block text-center w-full py-2.5 bg-neutral-800 hover:bg-brandAccent hover:text-black text-brandNeon font-orbitron font-bold text-sm rounded transition">
+                            Request Estimate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Pressure Washing -->
+                <div class="bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandAccent transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80" alt="Surface Pressure Washing" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-spray-can-sparkles text-brandNeon text-xl"></i>
+                                <h3 class="font-orbitron font-bold text-xl text-white">Power Surface Washing</h3>
+                            </div>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Remove mud, algae, grime, and oil stains from concrete driveways, back patios, walkways, and exterior sidings for a renewed appearance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" onclick="selectService('Pressure Washing')" class="block text-center w-full py-2.5 bg-neutral-800 hover:bg-brandAccent hover:text-black text-brandNeon font-orbitron font-bold text-sm rounded transition">
+                            Request Estimate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Full Package -->
+                <div class="bg-gradient-to-br from-brandCard to-emerald-950/40 rounded-2xl overflow-hidden border-2 border-brandAccent shadow-neon group flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-brandCard flex items-center justify-center p-6 text-center border-b border-brandBorder">
+                            <div>
+                                <i class="fa-solid fa-crown text-brandNeon text-5xl mb-2"></i>
+                                <h4 class="font-orbitron font-black text-xl text-white uppercase">The Total Care Combo</h4>
+                                <p class="text-brandNeon text-xs font-bold uppercase tracking-wider">Lawn + Gutter Maintenance</p>
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-orbitron font-bold text-xl text-white">Full Property Care Package</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Bundle routine bi-weekly grass mowing with seasonal gutter cleaning & leaf removal for maximum priority scheduling and savings.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" onclick="selectService('Full Package')" class="block text-center w-full py-3 bg-brandNeon hover:bg-white text-black font-orbitron font-black text-sm rounded shadow-neon transition">
+                            Get Bundle Discount
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Before / After Section -->
+    <section id="before-after" class="py-20 bg-brandCard border-t border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-block px-3 py-1 bg-brandAccent/10 border border-brandAccent text-brandNeon rounded font-rajdhani font-bold text-sm tracking-widest uppercase">
+                    PROOF OF PERFORMANCE
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-orbitron font-black text-white uppercase">
+                    BEFORE & <span class="text-brandNeon">AFTER</span>
+                </h2>
+                <p class="text-gray-400">
+                    Drag the interactive slider below to see the dramatic difference Christian Pedro and the Turk's Lawn & Gutter team bring to Clarksville homes.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Interactive Comparison 1: Lawn Transformation -->
+                <div class="space-y-4">
+                    <h3 class="font-orbitron font-bold text-xl text-white flex items-center gap-2">
+                        <i class="fa-solid fa-seedling text-brandNeon"></i> Overgrown Yard Restoration
+                    </h3>
+                    <div class="ba-slider rounded-2xl border border-brandAccent/50 h-[320px] sm:h-[400px]" id="slider1">
+                        <!-- After Image (Base) -->
+                        <img src="https://images.unsplash.com/photo-1592417817098-8f3d6ef23a28?auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 w-full h-full object-cover" alt="After Lawn Care">
+                        <span class="absolute bottom-4 right-4 bg-brandNeon text-black font-orbitron font-black text-xs px-3 py-1 rounded shadow">AFTER</span>
+
+                        <!-- Before Image (Overlaid Resize) -->
+                        <div class="resize">
+                            <img src="https://images.unsplash.com/photo-1533460004989-acf01064af01?auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 max-w-none h-full object-cover" style="width: 100%;" alt="Before Lawn Care">
+                            <span class="absolute bottom-4 left-4 bg-black/90 text-white font-orbitron font-bold text-xs px-3 py-1 rounded border border-gray-600">BEFORE</span>
+                        </div>
+
+                        <!-- Handle -->
+                        <div class="handle"></div>
+                    </div>
+                    <p class="text-xs text-gray-400 text-center">◄ Drag handle horizontally to compare before and after ►</p>
+                </div>
+
+                <!-- Interactive Comparison 2: Gutter Clearing -->
+                <div class="space-y-4">
+                    <h3 class="font-orbitron font-bold text-xl text-white flex items-center gap-2">
+                        <i class="fa-solid fa-broom text-brandNeon"></i> Gutter & Roof Edge Clearing
+                    </h3>
+                    <div class="ba-slider rounded-2xl border border-brandAccent/50 h-[320px] sm:h-[400px]" id="slider2">
+                        <!-- After Image (Clean Gutter) -->
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Clean Gutter After">
+                        <span class="absolute bottom-4 right-4 bg-brandNeon text-black font-orbitron font-black text-xs px-3 py-1 rounded shadow">AFTER</span>
+
+                        <!-- Before Image (Clogged Gutter / Debris) -->
+                        <div class="resize">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 max-w-none h-full object-cover" style="width: 100%;" alt="Clogged Gutter Before">
+                            <span class="absolute bottom-4 left-4 bg-black/90 text-white font-orbitron font-bold text-xs px-3 py-1 rounded border border-gray-600">BEFORE</span>
+                        </div>
+
+                        <!-- Handle -->
+                        <div class="handle"></div>
+                    </div>
+                    <p class="text-xs text-gray-400 text-center">◄ Drag handle horizontally to compare before and after ►</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-brandDark border-t border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <div class="inline-block px-3 py-1 bg-brandAccent/10 border border-brandAccent text-brandNeon rounded font-rajdhani font-bold text-sm tracking-widest uppercase">
+                    WORK SHOWCASE
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-orbitron font-black text-white uppercase">
+                    OUR PROJECT <span class="metallic-text">GALLERY</span>
+                </h2>
+                <p class="text-gray-400">
+                    A glimpse at recent jobs completed across Clarksville, TN.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10 font-orbitron text-xs sm:text-sm font-bold">
+                <button onclick="filterGallery('all')" class="gallery-btn active px-5 py-2.5 rounded-lg bg-brandNeon text-black shadow-neon transition">ALL WORK</button>
+                <button onclick="filterGallery('lawn')" class="gallery-btn px-5 py-2.5 rounded-lg bg-brandCard text-gray-300 border border-brandBorder hover:border-brandAccent transition">LAWN CARE</button>
+                <button onclick="filterGallery('gutter')" class="gallery-btn px-5 py-2.5 rounded-lg bg-brandCard text-gray-300 border border-brandBorder hover:border-brandAccent transition">GUTTER CLEANING</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="gallery-item lawn relative group overflow-hidden rounded-xl border border-brandBorder h-64">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6ef23a28?auto=format&fit=crop&w=600&q=80" alt="Lawn Mowing Clarksville" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <div>
+                            <span class="text-brandNeon font-orbitron text-xs font-bold uppercase">Lawn Maintenance</span>
+                            <h4 class="text-white font-bold text-lg">Striped Residential Lawn</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item gutter relative group overflow-hidden rounded-xl border border-brandBorder h-64">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Gutter Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <div>
+                            <span class="text-brandNeon font-orbitron text-xs font-bold uppercase">Gutter Cleaning</span>
+                            <h4 class="text-white font-bold text-lg">Full Gutter Debris Flush</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item lawn relative group overflow-hidden rounded-xl border border-brandBorder h-64">
+                    <img src="https://images.unsplash.com/photo-1584467541268-b040f83be3fd?auto=format&fit=crop&w=600&q=80" alt="Driveway Edging" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <div>
+                            <span class="text-brandNeon font-orbitron text-xs font-bold uppercase">Edging</span>
+                            <h4 class="text-white font-bold text-lg">Crisp Walkway Trim</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item lawn relative group overflow-hidden rounded-xl border border-brandBorder h-64">
+                    <img src="https://images.unsplash.com/photo-1558904541-efa8c196b27d?auto=format&fit=crop&w=600&q=80" alt="Leaf Cleanup" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <div>
+                            <span class="text-brandNeon font-orbitron text-xs font-bold uppercase">Yard Cleanup</span>
+                            <h4 class="text-white font-bold text-lg">Autumn Leaf Removal</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item gutter relative group overflow-hidden rounded-xl border border-brandBorder h-64">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Roof Debris Removal" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <div>
+                            <span class="text-brandNeon font-orbitron text-xs font-bold uppercase">Gutter Maintenance</span>
+                            <h4 class="text-white font-bold text-lg">Two-Story Roof Clearing</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item lawn relative group overflow-hidden rounded-xl border border-brandBorder h-64">
+                    <img src="https://images.unsplash.com/photo-1590682680695-43b964a3ae17?auto=format&fit=crop&w=600&q=80" alt="Commercial Property Care" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <div>
+                            <span class="text-brandNeon font-orbitron text-xs font-bold uppercase">Commercial Care</span>
+                            <h4 class="text-white font-bold text-lg">Commercial Turf Cutting</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-brandCard border-t border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-block px-3 py-1 bg-brandAccent/10 border border-brandAccent text-brandNeon rounded font-rajdhani font-bold text-sm tracking-widest uppercase">
+                    CLIENT FEEDBACK
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-orbitron font-black text-white uppercase">
+                    WHAT CLARKSVILLE <span class="text-brandNeon">SAYS</span>
+                </h2>
+                <p class="text-gray-400">
+                    Real reviews from property owners who trust Christian Pedro and Turk's Lawn & Gutter.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-brandDark p-8 rounded-2xl border border-brandBorder relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="text-amber-400 flex gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed italic">
+                            "Christian came out to quote my lawn and had it cut, edged, and blown clear the very next day. The edging along my driveway looks sharper than it ever has. Highly recommend!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brandBorder flex items-center justify-between">
+                        <div>
+                            <h4 class="font-orbitron font-bold text-white text-sm">Marcus V.</h4>
+                            <span class="text-xs text-gray-500">Clarksville Resident</span>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-brandBorder text-3xl"></i>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-brandDark p-8 rounded-2xl border border-brandBorder relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="text-amber-400 flex gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed italic">
+                            "Our gutters were completely backed up with pine needles after autumn. Turk's cleaned them out thoroughly and flushed all downspouts. Fair pricing and fast communication!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brandBorder flex items-center justify-between">
+                        <div>
+                            <h4 class="font-orbitron font-bold text-white text-sm">Sarah & Dave T.</h4>
+                            <span class="text-xs text-gray-500">Sango Area, TN</span>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-brandBorder text-3xl"></i>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-brandDark p-8 rounded-2xl border border-brandBorder relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="text-amber-400 flex gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed italic">
+                            "Reliable lawn care is hard to find in Clarksville, but Christian is on point every single time. Texting him for a quick estimate was effortless."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brandBorder flex items-center justify-between">
+                        <div>
+                            <h4 class="font-orbitron font-bold text-white text-sm">Robert K.</h4>
+                            <span class="text-xs text-gray-500">Clarksville Homeowner</span>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-brandBorder text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Free Estimate Section -->
+    <section id="contact" class="py-20 bg-brandDark relative border-t border-brandBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <div class="inline-block px-3 py-1 bg-brandAccent/10 border border-brandAccent text-brandNeon rounded font-rajdhani font-bold text-sm tracking-widest uppercase mb-3">
+                            GET IN TOUCH
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-orbitron font-black text-white uppercase">
+                            CLAIM YOUR <br><span class="text-brandNeon">FREE ESTIMATE</span>
+                        </h2>
+                        <p class="text-gray-400 mt-4 leading-relaxed">
+                            Have questions or ready for a quote? Call, text, or fill out the fast estimate request form. Christian Pedro will review your property details and reach out promptly!
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Direct Phone Card -->
+                        <div class="bg-brandCard p-6 rounded-2xl border-2 border-brandAccent/50 flex items-center gap-5 shadow-neon">
+                            <div class="w-14 h-14 bg-brandNeon text-black rounded-xl flex items-center justify-center text-2xl font-black shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-orbitron text-gray-400 font-bold uppercase tracking-wider block">Call or Text Direct</span>
+                                <a href="tel:7063151895" class="text-2xl sm:text-3xl font-orbitron font-black text-white hover:text-brandNeon transition">
+                                    (706) 315-1895
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Info Item 1 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-neutral-800 text-brandNeon rounded-lg flex items-center justify-center text-lg shrink-0 border border-brandBorder">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-orbitron font-bold text-white text-base">Owner / Operator</h4>
+                                <p class="text-gray-400 text-sm">Christian Pedro</p>
+                            </div>
+                        </div>
+
+                        <!-- Info Item 2 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-neutral-800 text-brandNeon rounded-lg flex items-center justify-center text-lg shrink-0 border border-brandBorder">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-orbitron font-bold text-white text-base">Primary Service Area</h4>
+                                <p class="text-gray-400 text-sm">Clarksville, TN & surrounding communities</p>
+                            </div>
+                        </div>
+
+                        <!-- Info Item 3 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-neutral-800 text-brandNeon rounded-lg flex items-center justify-center text-lg shrink-0 border border-brandBorder">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-orbitron font-bold text-white text-base">Operating Hours</h4>
+                                <p class="text-gray-400 text-sm">Mon - Sat: 7:00 AM - 7:00 PM | Sun: By Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brandCard p-8 sm:p-10 rounded-2xl border border-brandBorder glow-border relative">
+                        <h3 class="font-orbitron font-bold text-2xl text-white mb-2 uppercase">Request Free Estimate</h3>
+                        <p class="text-gray-400 text-sm mb-6">Fill out the form below for a quick, no-obligation quote.</p>
+
+                        <!-- Feedback Message Box (Replaces alert) -->
+                        <div id="formFeedback" class="hidden p-4 rounded-xl mb-6 text-sm font-semibold"></div>
+
+                        <form id="estimateForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-orbitron font-bold text-gray-300 uppercase mb-2">Your Full Name *</label>
+                                    <input type="text" required placeholder="e.g. John Smith" class="w-full bg-brandDark border border-brandBorder rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brandNeon transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-orbitron font-bold text-gray-300 uppercase mb-2">Phone Number *</label>
+                                    <input type="tel" required placeholder="(931) 555-0123" class="w-full bg-brandDark border border-brandBorder rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brandNeon transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-orbitron font-bold text-gray-300 uppercase mb-2">Property Address in Clarksville *</label>
+                                <input type="text" required placeholder="Street address or neighborhood" class="w-full bg-brandDark border border-brandBorder rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brandNeon transition">
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-orbitron font-bold text-gray-300 uppercase mb-2">Primary Service Needed *</label>
+                                    <select id="serviceSelect" class="w-full bg-brandDark border border-brandBorder rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandNeon transition">
+                                        <option value="Lawn Mowing & Maintenance">Lawn Mowing & Maintenance</option>
+                                        <option value="Gutter Cleaning & Flushing">Gutter Cleaning & Flushing</option>
+                                        <option value="Hard Line Edging & Trimming">Hard Line Edging & Trimming</option>
+                                        <option value="Yard & Leaf Cleanup">Yard & Leaf Cleanup</option>
+                                        <option value="Power Pressure Washing">Power Pressure Washing</option>
+                                        <option value="Full Package Combo">Full Package (Lawn + Gutter Combo)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-orbitron font-bold text-gray-300 uppercase mb-2">Preferred Frequency</label>
+                                    <select class="w-full bg-brandDark border border-brandBorder rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandNeon transition">
+                                        <option value="One-Time Service">One-Time Service</option>
+                                        <option value="Weekly Maintenance">Weekly Maintenance</option>
+                                        <option value="Bi-Weekly (Every 2 Weeks)">Bi-Weekly (Every 2 Weeks)</option>
+                                        <option value="Seasonal / Monthly">Seasonal / Monthly</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-orbitron font-bold text-gray-300 uppercase mb-2">Additional Property Notes</label>
+                                <textarea rows="3" placeholder="Tell us about yard size, gate access, gutter height, or specific needs..." class="w-full bg-brandDark border border-brandBorder rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brandNeon transition"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-brandAccent to-emerald-500 hover:from-brandNeon hover:to-green-400 text-black font-orbitron font-black py-4 rounded-lg shadow-neon uppercase tracking-wider text-base transition duration-300">
+                                Send Free Estimate Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-brandBorder py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brandDark border-2 border-brandAccent rounded-full flex items-center justify-center">
+                            <span class="font-orbitron font-black text-xl text-white">T</span>
+                        </div>
+                        <span class="font-orbitron text-xl font-black metallic-text">TURK'S LAWN & GUTTER</span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-md">
+                        Top-rated lawn mowing and gutter cleaning services operated by Christian Pedro. Dedicated to delivering precision power and clean outdoor results in Clarksville, TN.
+                    </p>
+                    <p class="text-brandNeon font-orbitron text-xs font-bold tracking-widest uppercase">
+                        PRECISION. POWER. CLEAN.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-orbitron font-bold text-white text-sm uppercase mb-4 tracking-wider">Quick Navigation</h4>
+                    <ul class="space-y-2 text-sm text-gray-400 font-rajdhani font-semibold">
+                        <li><a href="#about" class="hover:text-brandNeon transition">Who We Are</a></li>
+                        <li><a href="#why-us" class="hover:text-brandNeon transition">Why Choose Us</a></li>
+                        <li><a href="#services" class="hover:text-brandNeon transition">Services</a></li>
+                        <li><a href="#before-after" class="hover:text-brandNeon transition">Before & After Results</a></li>
+                        <li><a href="#gallery" class="hover:text-brandNeon transition">Work Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-brandNeon transition">Get Free Estimate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Service Area -->
+                <div>
+                    <h4 class="font-orbitron font-bold text-white text-sm uppercase mb-4 tracking-wider">Serving Tennessee</h4>
+                    <ul class="space-y-1 text-sm text-gray-400">
+                        <li>• Clarksville, TN</li>
+                        <li>• Sango Area</li>
+                        <li>• St. Bethlehem</li>
+                        <li>• New Providence</li>
+                        <li>• Surrounding Communities</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>&copy; <span id="year"></span> Turk's Lawn & Gutter. All Rights Reserved. Owner: Christian Pedro.</p>
+                <div class="flex gap-4">
+                    <a href="tel:7063151895" class="hover:text-brandNeon">(706) 315-1895</a>
+                    <span>|</span>
+                    <span>Clarksville, TN</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Auto set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking nav links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function initBeforeAfterSlider(sliderId) {
+            const slider = document.getElementById(sliderId);
+            if (!slider) return;
+
+            const resize = slider.querySelector('.resize');
+            const handle = slider.querySelector('.handle');
+            let isDragging = false;
+
+            function slide(x) {
+                const rect = slider.getBoundingClientRect();
+                let position = x - rect.left;
+                if (position < 0) position = 0;
+                if (position > rect.width) position = rect.width;
+                const percentage = (position / rect.width) * 100;
+
+                resize.style.width = percentage + '%';
+                handle.style.left = percentage + '%';
+            }
+
+            // Mouse Events
+            handle.addEventListener('mousedown', () => isDragging = true);
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                slide(e.clientX);
+            });
+
+            // Touch Events for Mobile Adaptability
+            handle.addEventListener('touchstart', () => isDragging = true);
+            window.addEventListener('touchend', () => isDragging = false);
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                slide(e.touches[0].clientX);
+            });
+        }
+
+        // Initialize sliders
+        initBeforeAfterSlider('slider1');
+        initBeforeAfterSlider('slider2');
+
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.gallery-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brandNeon', 'text-black', 'shadow-neon');
+                btn.classList.add('bg-brandCard', 'text-gray-300');
+            });
+
+            event.target.classList.remove('bg-brandCard', 'text-gray-300');
+            event.target.classList.add('bg-brandNeon', 'text-black', 'shadow-neon');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function selectService(serviceName) {
+            const serviceSelect = document.getElementById('serviceSelect');
+            if (serviceSelect) {
+                for (let i = 0; i < serviceSelect.options.length; i++) {
+                    if (serviceSelect.options[i].value.toLowerCase().includes(serviceName.toLowerCase())) {
+                        serviceSelect.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('formFeedback');
+            
+            // Show custom success message box instead of alert()
+            feedback.className = "p-4 rounded-xl mb-6 text-sm font-semibold bg-emerald-950 border border-brandNeon text-brandNeon block";
+            feedback.innerHTML = `
+                <i class="fa-solid fa-circle-check mr-2"></i> 
+                Thank you! Your estimate request has been submitted. Christian Pedro will review your property details and contact you shortly at the provided phone number.
+            `;
+
+            document.getElementById('estimateForm').reset();
+
+            // Smooth scroll up to feedback message if needed
+            feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
